@@ -4,15 +4,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:paddingStart="16dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="12dp"
     android:background="#EEF4F6">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="16dp"
-    android:paddingTop="10dp"
-    android:paddingEnd="16dp"
-    android:paddingBottom="12dp"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -113,6 +114,7 @@
         android:inputType="textPersonName"
         android:padding="12dp"
         android:textColorHint="#969799"
+        android:textColor="#1F1F1E"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/filter"
         app:layout_constraintStart_toStartOf="parent"
@@ -248,6 +250,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="92dp"
             android:paddingHorizontal="8dp"
+            android:paddingBottom="8dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/product_card_background"
             app:layout_constraintStart_toStartOf="parent"
@@ -268,6 +271,7 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
+                android:id="@+id/desc_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="He runs 1 meter... trips\nover his boot."
@@ -281,6 +285,65 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title_1"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/price_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/price_background"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/desc_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cart_1">
+                <ImageView
+                    android:id="@+id/bag_1"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_bag"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintEnd_toStartOf="@id/offer_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/offer_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5̶ 3 cheeses"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+                    android:includeFontPadding="false"
+                    android:textSize="12dp"
+                    android:textColor="#03578A"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@id/bag_1"
+                    app:layout_constraintTop_toTopOf="@id/bag_1"
+                    app:layout_constraintBottom_toBottomOf="@id/bag_1"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cart_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cart_background"
+                app:layout_constraintStart_toEndOf="@id/price_1"
+                app:layout_constraintTop_toTopOf="@id/price_1"
+                app:layout_constraintBottom_toBottomOf="@id/price_1"
+                app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_cart"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
@@ -304,6 +367,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="92dp"
             android:paddingHorizontal="8dp"
+            android:paddingBottom="8dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/product_card_background"
             app:layout_constraintStart_toStartOf="parent"
@@ -314,7 +378,7 @@
                 android:id="@+id/title_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sport Tom"
+                android:text="Tom the lover"
                 android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
                 android:textSize="18sp"
                 android:textColor="#1F1F1E"
@@ -324,9 +388,10 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
+                android:id="@+id/desc_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="He runs 1 meter... trips\nover his boot."
+                android:text="He loves one-sidedly... and is beaten by the other side."
                 android:fontFamily="@font/ibm_plex_sans_arabic_regular"
                 android:textSize="12sp"
                 android:textColor="#969799"
@@ -337,6 +402,65 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title_2"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/price_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/price_background"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/desc_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cart_2">
+                <ImageView
+                    android:id="@+id/bag_2"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_bag"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintEnd_toStartOf="@id/offer_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/offer_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 cheeses"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+                    android:includeFontPadding="false"
+                    android:textSize="12dp"
+                    android:textColor="#03578A"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@id/bag_2"
+                    app:layout_constraintTop_toTopOf="@id/bag_2"
+                    app:layout_constraintBottom_toBottomOf="@id/bag_2"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cart_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cart_background"
+                app:layout_constraintStart_toEndOf="@id/price_2"
+                app:layout_constraintTop_toTopOf="@id/price_2"
+                app:layout_constraintBottom_toBottomOf="@id/price_2"
+                app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_cart"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <ImageView
             android:layout_width="98dp"
@@ -361,6 +485,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="92dp"
             android:paddingHorizontal="8dp"
+            android:paddingBottom="8dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/product_card_background"
             app:layout_constraintStart_toStartOf="parent"
@@ -371,7 +496,7 @@
                 android:id="@+id/title_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sport Tom"
+                android:text="Tom the bomb"
                 android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
                 android:textSize="18sp"
                 android:textColor="#1F1F1E"
@@ -381,9 +506,10 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
+                android:id="@+id/desc_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="He runs 1 meter... trips\nover his boot."
+                android:text="He blows himself up before Jerry can catch him."
                 android:fontFamily="@font/ibm_plex_sans_arabic_regular"
                 android:textSize="12sp"
                 android:textColor="#969799"
@@ -394,6 +520,65 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title_3"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/price_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/price_background"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/desc_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cart_3">
+                <ImageView
+                    android:id="@+id/bag_3"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_bag"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintEnd_toStartOf="@id/offer_3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/offer_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 cheeses"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+                    android:includeFontPadding="false"
+                    android:textSize="12dp"
+                    android:textColor="#03578A"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@id/bag_3"
+                    app:layout_constraintTop_toTopOf="@id/bag_3"
+                    app:layout_constraintBottom_toBottomOf="@id/bag_3"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cart_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cart_background"
+                app:layout_constraintStart_toEndOf="@id/price_3"
+                app:layout_constraintTop_toTopOf="@id/price_3"
+                app:layout_constraintBottom_toBottomOf="@id/price_3"
+                app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_cart"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <ImageView
             android:layout_width="100dp"
@@ -415,6 +600,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="92dp"
+            android:paddingBottom="8dp"
             android:paddingHorizontal="8dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/product_card_background"
@@ -426,7 +612,7 @@
                 android:id="@+id/title_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sport Tom"
+                android:text="Spy Tom"
                 android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
                 android:textSize="18sp"
                 android:textColor="#1F1F1E"
@@ -436,9 +622,10 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
+                android:id="@+id/desc_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="He runs 1 meter... trips\nover his boot."
+                android:text="Disguises itself as a table."
                 android:fontFamily="@font/ibm_plex_sans_arabic_regular"
                 android:textSize="12sp"
                 android:textColor="#969799"
@@ -449,6 +636,65 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title_4"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/price_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/price_background"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/desc_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cart_4">
+                <ImageView
+                    android:id="@+id/bag_4"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_bag"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintEnd_toStartOf="@id/offer_4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/offer_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 cheeses"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+                    android:includeFontPadding="false"
+                    android:textSize="12dp"
+                    android:textColor="#03578A"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@id/bag_4"
+                    app:layout_constraintTop_toTopOf="@id/bag_4"
+                    app:layout_constraintBottom_toBottomOf="@id/bag_4"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cart_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cart_background"
+                app:layout_constraintStart_toEndOf="@id/price_4"
+                app:layout_constraintTop_toTopOf="@id/price_4"
+                app:layout_constraintBottom_toBottomOf="@id/price_4"
+                app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_cart"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <ImageView
             android:layout_width="84dp"
@@ -473,6 +719,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="92dp"
             android:paddingHorizontal="8dp"
+            android:paddingBottom="8dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/product_card_background"
             app:layout_constraintStart_toStartOf="parent"
@@ -483,7 +730,7 @@
                 android:id="@+id/title_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sport Tom"
+                android:text="Frozen Tom"
                 android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
                 android:textSize="18sp"
                 android:textColor="#1F1F1E"
@@ -493,9 +740,10 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
+                android:id="@+id/desc_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="He runs 1 meter... trips\nover his boot."
+                android:text="He was chasing Jerry, he froze after the first look"
                 android:fontFamily="@font/ibm_plex_sans_arabic_regular"
                 android:textSize="12sp"
                 android:textColor="#969799"
@@ -506,6 +754,65 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title_5"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/price_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/price_background"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/desc_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cart_5">
+                <ImageView
+                    android:id="@+id/bag_5"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_bag"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintEnd_toStartOf="@id/offer_5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/offer_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 cheeses"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+                    android:includeFontPadding="false"
+                    android:textSize="12dp"
+                    android:textColor="#03578A"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@id/bag_5"
+                    app:layout_constraintTop_toTopOf="@id/bag_5"
+                    app:layout_constraintBottom_toBottomOf="@id/bag_5"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cart_5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cart_background"
+                app:layout_constraintStart_toEndOf="@id/price_5"
+                app:layout_constraintTop_toTopOf="@id/price_5"
+                app:layout_constraintBottom_toBottomOf="@id/price_5"
+                app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_cart"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
@@ -529,6 +836,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="92dp"
             android:paddingHorizontal="8dp"
+            android:paddingBottom="8dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/product_card_background"
             app:layout_constraintStart_toStartOf="parent"
@@ -539,7 +847,7 @@
                 android:id="@+id/title_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sport Tom"
+                android:text="Sleeping Tom"
                 android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
                 android:textSize="18sp"
                 android:textColor="#1F1F1E"
@@ -549,9 +857,10 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
+                android:id="@+id/desc_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="He runs 1 meter... trips\nover his boot."
+                android:text="He doesn't chase anyone, he just snores in stereo."
                 android:fontFamily="@font/ibm_plex_sans_arabic_regular"
                 android:textSize="12sp"
                 android:textColor="#969799"
@@ -562,6 +871,65 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title_6"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/price_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/price_background"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/desc_6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cart_6">
+                <ImageView
+                    android:id="@+id/bag_6"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_bag"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintEnd_toStartOf="@id/offer_6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/offer_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 cheeses"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+                    android:includeFontPadding="false"
+                    android:textSize="12dp"
+                    android:textColor="#03578A"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@id/bag_6"
+                    app:layout_constraintTop_toTopOf="@id/bag_6"
+                    app:layout_constraintBottom_toBottomOf="@id/bag_6"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cart_6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cart_background"
+                app:layout_constraintStart_toEndOf="@id/price_6"
+                app:layout_constraintTop_toTopOf="@id/price_6"
+                app:layout_constraintBottom_toBottomOf="@id/price_6"
+                app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_cart"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <ImageView
             android:layout_width="104dp"
