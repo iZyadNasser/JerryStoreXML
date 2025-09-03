@@ -8,7 +8,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:paddingStart="16dp"
     android:paddingTop="10dp"
     android:paddingEnd="16dp"
@@ -196,6 +196,380 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/cheap_tom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheap tom section"
+        android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+        android:textSize="20sp"
+        android:textColor="#1F1F1E"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tom_card"/>
+
+    <TextView
+        android:id="@+id/view_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View all"
+        android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+        android:textSize="12sp"
+        android:textColor="#03578A"
+        android:includeFontPadding="false"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@id/arrow"
+        app:layout_constraintTop_toTopOf="@id/cheap_tom"
+        app:layout_constraintBottom_toBottomOf="@id/cheap_tom"/>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_all"
+        app:layout_constraintBottom_toBottomOf="@id/view_all"/>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/cheap_tom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/card_2">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="92dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/product_card_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport Tom"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:textSize="18sp"
+                android:textColor="#1F1F1E"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="He runs 1 meter... trips\nover his boot."
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:textSize="12sp"
+                android:textColor="#969799"
+                android:textAlignment="center"
+                android:minLines="3"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_1"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="93dp"
+            android:src="@drawable/im_card_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/card_1"
+        app:layout_constraintBottom_toBottomOf="@id/card_1"
+        app:layout_constraintStart_toEndOf="@id/card_1"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="92dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/product_card_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport Tom"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:textSize="18sp"
+                android:textColor="#1F1F1E"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="He runs 1 meter... trips\nover his boot."
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:textSize="12sp"
+                android:textColor="#969799"
+                android:textAlignment="center"
+                android:minLines="3"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_2"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="98dp"
+            android:layout_height="100dp"
+            android:src="@drawable/im_card_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/card_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/card_4">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="92dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/product_card_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport Tom"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:textSize="18sp"
+                android:textColor="#1F1F1E"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="He runs 1 meter... trips\nover his boot."
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:textSize="12sp"
+                android:textColor="#969799"
+                android:textAlignment="center"
+                android:minLines="3"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_3"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/im_card_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/card_3"
+        app:layout_constraintBottom_toBottomOf="@id/card_3"
+        app:layout_constraintStart_toEndOf="@id/card_3"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="92dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/product_card_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport Tom"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:textSize="18sp"
+                android:textColor="#1F1F1E"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="He runs 1 meter... trips\nover his boot."
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:textSize="12sp"
+                android:textColor="#969799"
+                android:textAlignment="center"
+                android:minLines="3"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_4"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="84dp"
+            android:layout_height="100dp"
+            android:src="@drawable/im_card_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/card_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/card_6">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="92dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/product_card_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport Tom"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:textSize="18sp"
+                android:textColor="#1F1F1E"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="He runs 1 meter... trips\nover his boot."
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:textSize="12sp"
+                android:textColor="#969799"
+                android:textAlignment="center"
+                android:minLines="3"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_5"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="76dp"
+            android:layout_height="100dp"
+            android:src="@drawable/im_card_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/card_5"
+        app:layout_constraintBottom_toBottomOf="@id/card_5"
+        app:layout_constraintStart_toEndOf="@id/card_5"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="92dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/product_card_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport Tom"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:textSize="18sp"
+                android:textColor="#1F1F1E"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="He runs 1 meter... trips\nover his boot."
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:textSize="12sp"
+                android:textColor="#969799"
+                android:textAlignment="center"
+                android:minLines="3"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_6"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="104dp"
+            android:layout_height="100dp"
+            android:src="@drawable/im_card_6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
